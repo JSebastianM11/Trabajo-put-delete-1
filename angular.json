@@ -1,9 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "56b6a771-8a15-49d8-89f1-d761d6387a96"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "MetodosPutDelete": {
+    "httpPost": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/MetodosPutDelete",
+            "outputPath": "dist/httpPost",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -27,7 +30,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css", 
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": []
           },
@@ -68,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "MetodosPutDelete:build:production"
+              "browserTarget": "httpPost:build:production"
             },
             "development": {
-              "browserTarget": "MetodosPutDelete:build:development"
+              "browserTarget": "httpPost:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "MetodosPutDelete:build"
+            "browserTarget": "httpPost:build"
           }
         },
         "test": {
@@ -102,5 +106,5 @@
       }
     }
   },
-  "defaultProject": "MetodosPutDelete"
+  "defaultProject": "httpPost"
 }
